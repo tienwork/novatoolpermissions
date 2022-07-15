@@ -14,6 +14,16 @@
     "authentication",
     "authorization"
   ],
+    "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tienwork/novafieldcheckboxes"
+    }
+  ],
   "license": "MIT",
   "authors": [
     {
@@ -36,16 +46,6 @@
       "Silvanite\\NovaToolPermissions\\": "src-php/"
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://nova.laravel.com"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/tienwork/novafieldcheckboxes"
-    }
-  ],
   "extra": {
     "laravel": {
       "providers": [
