@@ -21,7 +21,5 @@ class NovaToolPermissions extends Tool
         ]);
     }
 
-    public function menu(Request $request)
-    {
-    }
+    public function menu(Request $request){}
 }
