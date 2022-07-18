@@ -10,8 +10,7 @@ use Laravel\Nova\Fields\Text;
 use Silvanite\Brandenburg\Policy;
 use Laravel\Nova\Fields\BelongsToMany;
 use Silvanite\Brandenburg\Role as RoleModel;
-//use Silvanite\NovaFieldCheckboxes\Checkboxes;
-use Laravel\Nova\Fields\BooleanGroup;
+use Silvanite\NovaFieldCheckboxes\Checkboxes;
 
 class Role extends Resource
 {
@@ -64,7 +63,7 @@ class Role extends Resource
                 ->updateRules('unique:roles,slug,{{resourceId}}')
                 ->sortable(),
 
-            BooleanGroup::make(__('Permissions'), 'permissions')->options(collect(Policy::all())
+            Checkboxes::make(__('Permissions'), 'permissions')->options(collect(Policy::all())
                 ->mapWithKeys(function ($policy) {
                     return [
                         $policy => __($policy),
